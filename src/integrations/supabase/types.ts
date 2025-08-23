@@ -14,7 +14,261 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_user: {
+        Row: {
+          created_at: string | null
+          email: string | null
+          id: string
+          password: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          password?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          password?: string | null
+        }
+        Relationships: []
+      }
+      downloads: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          download_count: number | null
+          file_name: string
+          file_type: string | null
+          file_url: string
+          id: string
+          is_active: boolean | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          download_count?: number | null
+          file_name: string
+          file_type?: string | null
+          file_url: string
+          id?: string
+          is_active?: boolean | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          download_count?: number | null
+          file_name?: string
+          file_type?: string | null
+          file_url?: string
+          id?: string
+          is_active?: boolean | null
+        }
+        Relationships: []
+      }
+      experience: {
+        Row: {
+          achievements: string[] | null
+          company: string
+          created_at: string | null
+          display_order: number | null
+          end_date: string | null
+          id: string
+          is_current: boolean | null
+          location: string | null
+          responsibilities: string[] | null
+          role: string
+          start_date: string | null
+          type: string | null
+        }
+        Insert: {
+          achievements?: string[] | null
+          company: string
+          created_at?: string | null
+          display_order?: number | null
+          end_date?: string | null
+          id?: string
+          is_current?: boolean | null
+          location?: string | null
+          responsibilities?: string[] | null
+          role: string
+          start_date?: string | null
+          type?: string | null
+        }
+        Update: {
+          achievements?: string[] | null
+          company?: string
+          created_at?: string | null
+          display_order?: number | null
+          end_date?: string | null
+          id?: string
+          is_current?: boolean | null
+          location?: string | null
+          responsibilities?: string[] | null
+          role?: string
+          start_date?: string | null
+          type?: string | null
+        }
+        Relationships: []
+      }
+      inquiries: {
+        Row: {
+          created_at: string | null
+          email: string
+          id: string
+          is_read: boolean | null
+          is_replied: boolean | null
+          message: string
+          name: string
+          phone: string | null
+          subject: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          id?: string
+          is_read?: boolean | null
+          is_replied?: boolean | null
+          message: string
+          name: string
+          phone?: string | null
+          subject?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          id?: string
+          is_read?: boolean | null
+          is_replied?: boolean | null
+          message?: string
+          name?: string
+          phone?: string | null
+          subject?: string | null
+        }
+        Relationships: []
+      }
+      my_profile: {
+        Row: {
+          automations_built: number | null
+          bio: string | null
+          email: string | null
+          github_url: string | null
+          hours_saved: number | null
+          id: string
+          linkedin_url: string | null
+          location: string | null
+          medium_url: string | null
+          name: string | null
+          phone: string | null
+          product_skills: string[] | null
+          projects_completed: number | null
+          technical_skills: string[] | null
+          title: string | null
+          tools: string[] | null
+          updated_at: string | null
+          users_served: number | null
+          years_experience: number | null
+        }
+        Insert: {
+          automations_built?: number | null
+          bio?: string | null
+          email?: string | null
+          github_url?: string | null
+          hours_saved?: number | null
+          id?: string
+          linkedin_url?: string | null
+          location?: string | null
+          medium_url?: string | null
+          name?: string | null
+          phone?: string | null
+          product_skills?: string[] | null
+          projects_completed?: number | null
+          technical_skills?: string[] | null
+          title?: string | null
+          tools?: string[] | null
+          updated_at?: string | null
+          users_served?: number | null
+          years_experience?: number | null
+        }
+        Update: {
+          automations_built?: number | null
+          bio?: string | null
+          email?: string | null
+          github_url?: string | null
+          hours_saved?: number | null
+          id?: string
+          linkedin_url?: string | null
+          location?: string | null
+          medium_url?: string | null
+          name?: string | null
+          phone?: string | null
+          product_skills?: string[] | null
+          projects_completed?: number | null
+          technical_skills?: string[] | null
+          title?: string | null
+          tools?: string[] | null
+          updated_at?: string | null
+          users_served?: number | null
+          years_experience?: number | null
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          category: string | null
+          created_at: string | null
+          demo_url: string | null
+          description: string | null
+          display_order: number | null
+          end_date: string | null
+          github_url: string | null
+          id: string
+          image_url: string | null
+          impact_metric: string | null
+          is_featured: boolean | null
+          start_date: string | null
+          tech_stack: string[] | null
+          title: string
+          users_count: string | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string | null
+          demo_url?: string | null
+          description?: string | null
+          display_order?: number | null
+          end_date?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          impact_metric?: string | null
+          is_featured?: boolean | null
+          start_date?: string | null
+          tech_stack?: string[] | null
+          title: string
+          users_count?: string | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string | null
+          demo_url?: string | null
+          description?: string | null
+          display_order?: number | null
+          end_date?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          impact_metric?: string | null
+          is_featured?: boolean | null
+          start_date?: string | null
+          tech_stack?: string[] | null
+          title?: string
+          users_count?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
