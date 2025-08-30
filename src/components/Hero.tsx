@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero" aria-label="Hero section introducing Parth Shah">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -25,10 +25,12 @@ const Hero = () => {
           backgroundPosition: "center",
           opacity: 0.1,
         }}
+        role="img"
+        aria-label="Abstract technology background pattern"
       />
 
       {/* Animated background elements */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div
           className="absolute top-40 right-32 w-48 h-48 bg-secondary/10 rounded-full blur-2xl animate-float"
@@ -41,7 +43,7 @@ const Hero = () => {
       </div>
 
       <div className="container-custom relative z-10 text-center">
-        <div className="animate-fade-in">
+        <header className="animate-fade-in">
           {/* Main Heading */}
           <h1 className="mb-6">
             Hi, I'm <span className="text-gradient">Parth Shah</span>
@@ -115,25 +117,27 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12">
+          <nav className="flex justify-center space-x-6 mb-12" aria-label="Social media links">
             <a
               href="https://linkedin.com/in/parth-shah"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              aria-label="Parth Shah's LinkedIn profile"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://github.com/parth-shah"
+              href="https://github.com/shahparthsp11"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              aria-label="Parth Shah's GitHub profile"
             >
               <Github className="h-6 w-6" />
             </a>
-          </div>
-        </div>
+          </nav>
+        </header>
       </div>
 
       {/* Scroll indicator */}
