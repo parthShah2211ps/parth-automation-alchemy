@@ -73,7 +73,7 @@ const Navigation = () => {
               size="sm"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/14j702R9qTkHXqpT5cdWVFSNDL1fn8Y61/view?usp=sharing",
+                  "https://drive.google.com/file/d/1hiMVRkzBHgp0jz71TWAjn7PPYRd5xixP/view?usp=sharing",
                   "_blank"
                 )
               }
@@ -117,7 +117,7 @@ const Navigation = () => {
                 size="sm"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/14j702R9qTkHXqpT5cdWVFSNDL1fn8Y61/view?usp=sharing",
+                    "https://drive.google.com/file/d/1hiMVRkzBHgp0jz71TWAjn7PPYRd5xixP/view?usp=sharing",
                     "_blank"
                   )
                 }

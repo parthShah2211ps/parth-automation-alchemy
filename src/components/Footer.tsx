@@ -1,22 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Heart, Github, Linkedin, ExternalLink, Mail, ArrowUp } from "lucide-react";
+import {
+  Heart,
+  Github,
+  Linkedin,
+  ExternalLink,
+  Mail,
+  ArrowUp,
+} from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const quickLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
-    const id = href.replace('#', '');
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    const id = href.replace("#", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -31,37 +38,39 @@ const Footer = () => {
                 <span className="text-gradient">Parth Shah</span>
               </h3>
               <p className="text-muted-foreground mb-6 max-w-md">
-                Technical Product Manager passionate about bridging the gap between business needs and technical solutions through intelligent automation and user-centered design.
+                Technical Product Manager passionate about bridging the gap
+                between business needs and technical solutions through
+                intelligent automation and user-centered design.
               </p>
               <div className="flex space-x-4">
-                <a 
-                  href="https://linkedin.com/in/parth-shah" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/parth-shah-8a041514b/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   aria-label="LinkedIn Profile"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a 
-                  href="https://github.com/parth-shah" 
-                  target="_blank" 
+                {/* <a
+                  href="https://github.com/parth-shah"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   aria-label="GitHub Profile"
                 >
                   <Github className="w-5 h-5" />
-                </a>
-                <a 
-                  href="https://medium.com/@parth-shah" 
-                  target="_blank" 
+                </a> */}
+                {/* <a
+                  href="https://medium.com/@parth-shah"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   aria-label="Medium Articles"
                 >
                   <ExternalLink className="w-5 h-5" />
-                </a>
-                <a 
+                </a> */}
+                <a
                   href="mailto:parth@example.com"
                   className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   aria-label="Email Contact"
@@ -89,7 +98,7 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div>
+            {/* <div>
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2">
                 <li>
@@ -125,7 +134,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -138,7 +147,7 @@ const Footer = () => {
             <Heart className="w-4 h-4 text-red-500" />
             <span>using React, TypeScript, and Tailwind CSS</span>
           </div>
-          
+
           <Button
             variant="ghost"
             size="sm"

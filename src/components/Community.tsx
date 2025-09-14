@@ -1,7 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, BookOpen, Video, Star, Download, Calendar, ExternalLink, TrendingUp } from "lucide-react";
+import {
+  Users,
+  BookOpen,
+  Video,
+  Star,
+  Download,
+  Calendar,
+  ExternalLink,
+  TrendingUp,
+} from "lucide-react";
 
 const Community = () => {
   const workshopStats = [
@@ -15,36 +30,39 @@ const Community = () => {
     {
       id: 1,
       title: "PM Automation Playbook",
-      description: "Comprehensive guide covering 25+ automation strategies specifically designed for Product Managers. Includes templates, best practices, and real-world case studies.",
+      description:
+        "Comprehensive guide covering 25+ automation strategies specifically designed for Product Managers. Includes templates, best practices, and real-world case studies.",
       type: "E-book",
       stats: "1,000+ downloads",
       rating: 4.8,
       link: "#",
       featured: true,
-      icon: BookOpen
+      icon: BookOpen,
     },
     {
       id: 2,
       title: "n8n Mastery Workshop Series",
-      description: "8-part video series teaching advanced n8n automation techniques. From basic workflows to complex AI integrations.",
+      description:
+        "8-part video series teaching advanced n8n automation techniques. From basic workflows to complex AI integrations.",
       type: "Video Course",
       stats: "5,000+ views",
       rating: 4.9,
       link: "#",
       featured: true,
-      icon: Video
+      icon: Video,
     },
     {
       id: 3,
       title: "Automation ROI Calculator",
-      description: "Interactive tool to calculate time savings and ROI for automation projects. Includes industry benchmarks and optimization suggestions.",
+      description:
+        "Interactive tool to calculate time savings and ROI for automation projects. Includes industry benchmarks and optimization suggestions.",
       type: "Tool",
       stats: "2,000+ uses",
       rating: 4.7,
       link: "#",
       featured: false,
-      icon: TrendingUp
-    }
+      icon: TrendingUp,
+    },
   ];
 
   const testimonials = [
@@ -53,22 +71,22 @@ const Community = () => {
       text: "Parth's automation workshop transformed how our team operates. We've saved 20+ hours weekly and improved our decision-making speed by 40%.",
       author: "Sarah Chen",
       role: "Senior Product Manager",
-      company: "TechFlow"
+      company: "TechFlow",
     },
     {
       id: 2,
       text: "The n8n templates are incredible. What used to take our team days now happens automatically. Parth's expertise is unmatched.",
       author: "Mike Rodriguez",
-      role: "Head of Operations", 
-      company: "GrowthLabs"
+      role: "Head of Operations",
+      company: "GrowthLabs",
     },
     {
       id: 3,
       text: "Best investment we made this year. The PM Automation Playbook is a game-changer for any product team serious about efficiency.",
       author: "Emily Watson",
       role: "VP of Product",
-      company: "InnovateCorp"
-    }
+      company: "InnovateCorp",
+    },
   ];
 
   const upcomingWorkshops = [
@@ -80,18 +98,18 @@ const Community = () => {
       duration: "2 hours",
       attendees: 45,
       maxAttendees: 50,
-      level: "Intermediate"
+      level: "Intermediate",
     },
     {
       id: 2,
       title: "Automated Customer Feedback Analysis",
-      date: "March 22, 2024", 
+      date: "March 22, 2024",
       time: "10:00 AM PST",
       duration: "90 minutes",
       attendees: 32,
       maxAttendees: 40,
-      level: "Beginner"
-    }
+      level: "Beginner",
+    },
   ];
 
   return (
@@ -103,7 +121,8 @@ const Community = () => {
             Community & <span className="text-gradient">Learning</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Sharing knowledge and empowering teams through workshops, resources, and community contributions
+            Sharing knowledge and empowering teams through workshops, resources,
+            and community contributions
           </p>
         </div>
 
@@ -126,7 +145,7 @@ const Community = () => {
         </div>
 
         {/* Resources */}
-        <div className="mb-16 animate-scale-in">
+        {/* <div className="mb-16 animate-scale-in">
           <h3 className="text-2xl font-semibold text-center mb-8">Popular Resources</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {resources.map((resource, index) => {
@@ -181,11 +200,13 @@ const Community = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Upcoming Workshops */}
         <div className="mb-16 animate-fade-in">
-          <h3 className="text-2xl font-semibold text-center mb-8">Upcoming Workshops</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8">
+            Upcoming Workshops
+          </h3>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {upcomingWorkshops.map((workshop) => (
               <Card key={workshop.id} className="card-elegant">
@@ -203,7 +224,9 @@ const Community = () => {
                     <div className="space-y-1 text-sm">
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{workshop.date} at {workshop.time}</span>
+                        <span>
+                          {workshop.date} at {workshop.time}
+                        </span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Video className="w-4 h-4" />
@@ -212,7 +235,7 @@ const Community = () => {
                     </div>
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent>
                   <Button className="w-full" variant="outline">
                     <ExternalLink className="w-4 h-4 mr-2" />
@@ -226,18 +249,23 @@ const Community = () => {
 
         {/* Testimonials */}
         <div className="animate-slide-up">
-          <h3 className="text-2xl font-semibold text-center mb-8">What People Say</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8">
+            What People Say
+          </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card 
-                key={testimonial.id} 
+              <Card
+                key={testimonial.id}
                 className="card-elegant"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4 italic">
@@ -257,14 +285,15 @@ const Community = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in">
-          <h3 className="text-2xl font-semibold mb-4">Want to learn automation?</h3>
+          <h3 className="text-2xl font-semibold mb-4">
+            Want to learn automation?
+          </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Join hundreds of professionals who have transformed their workflows with proven automation strategies.
+            Join hundreds of professionals who have transformed their workflows
+            with proven automation strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-hero">
-              Book a Workshop
-            </Button>
+            <Button className="btn-hero">Book a Workshop</Button>
             <Button variant="outline" className="btn-hero-outline">
               Download Free Guide
             </Button>

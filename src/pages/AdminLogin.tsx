@@ -1,15 +1,21 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { adminLogin } from '@/lib/admin';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { adminLogin } from "@/lib/admin";
+import { useToast } from "@/hooks/use-toast";
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState('shahparthsp11@gmail.com');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("parthshah@buildwithparth.tech");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -25,7 +31,7 @@ const AdminLogin = () => {
           title: "Login successful",
           description: "Welcome to the admin panel!",
         });
-        navigate('/admin/dashboard');
+        navigate("/admin/dashboard");
       } else {
         toast({
           title: "Login failed",
@@ -79,7 +85,7 @@ const AdminLogin = () => {
               />
             </div>
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Logging in...' : 'Login'}
+              {loading ? "Logging in..." : "Login"}
             </Button>
           </form>
         </CardContent>

@@ -131,7 +131,9 @@ const Contact = () => {
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm">shahparthsp11@gmail.com</span>
+                    <span className="text-sm">
+                      parthshah@buildwithparth.tech
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-4 h-4 text-muted-foreground" />
@@ -158,7 +160,7 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-3">
                     <a
-                      href="https://linkedin.com/in/parth-shah"
+                      href="https://www.linkedin.com/in/parth-shah-8a041514b/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted transition-colors duration-200 group"

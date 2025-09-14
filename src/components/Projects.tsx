@@ -791,7 +791,30 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-scale-in">
           {filteredProjects.map((project, index) => {
-            const Icon = project.icon;
+            // Map icon string to actual icon component
+            const getIcon = (iconName: string) => {
+              const iconMap: { [key: string]: any } = {
+                Database: Database,
+                Users: Users,
+                Globe: ExternalLink,
+                Anchor: ExternalLink,
+                Workflow: Workflow,
+                GitBranch: Github,
+                Package: BarChart3,
+                Brain: Brain,
+                Sparkles: Zap,
+                Compass: ExternalLink,
+                Server: Database,
+                Code: Github,
+                Terminal: ExternalLink,
+                BookOpen: ExternalLink,
+                Network: Workflow,
+                Target: BarChart3,
+              };
+              return iconMap[iconName] || ExternalLink;
+            };
+            
+            const Icon = getIcon(project.icon);
             return (
               <Card
                 key={project.id}

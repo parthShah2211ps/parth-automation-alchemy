@@ -19,27 +19,30 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="about" className="section-padding bg-muted/30" aria-labelledby="about-heading">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Image */}
           <div className="animate-fade-in">
-            <div className="relative">
+            <figure className="relative">
               <div className="relative w-full max-w-md mx-auto">
                 <img
                   src={professionalHeadshot}
-                  alt="Parth Shah - Professional Headshot"
+                  alt="Parth Shah - Technical Product Manager and Full-Stack Developer professional headshot"
                   className="w-full h-auto rounded-2xl shadow-xl"
+                  loading="lazy"
+                  width="400"
+                  height="600"
                 />
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-primary rounded-full opacity-20" />
-                <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-success rounded-full opacity-30" />
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-primary rounded-full opacity-20" aria-hidden="true" />
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-success rounded-full opacity-30" aria-hidden="true" />
               </div>
-            </div>
+            </figure>
           </div>
 
           {/* Right Column - Content */}
-          <div className="animate-slide-up">
-            <h2 className="mb-6">
+          <article className="animate-slide-up">
+            <h2 id="about-heading" className="mb-6">
               About <span className="text-gradient">Me</span>
             </h2>
 
@@ -136,7 +139,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
