@@ -106,7 +106,7 @@ const Contact = () => {
     <section id="contact" className="section-padding">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="mb-6">
             Let's <span className="text-gradient">Connect</span>
           </h2>
@@ -116,7 +116,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Information */}
           <div className="lg:col-span-1 animate-slide-up">
             <div className="space-y-6">

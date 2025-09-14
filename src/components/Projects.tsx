@@ -68,7 +68,7 @@ const Projects = () => {
         "Built scalable backend APIs for healthcare data management",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 2,
@@ -106,7 +106,7 @@ const Projects = () => {
         "Built real-time data synchronization for CRM operations",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 3,
@@ -144,7 +144,7 @@ const Projects = () => {
         "Implemented scalable content analysis and processing pipelines",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 4,
@@ -182,7 +182,7 @@ const Projects = () => {
         "Achieved 99.9% uptime with efficient database and connection handling",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
 
     // ===== N8N AUTOMATION PROJECTS =====
@@ -220,7 +220,7 @@ const Projects = () => {
         "Integrated multiple healthcare systems for seamless data flow",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 6,
@@ -257,7 +257,7 @@ const Projects = () => {
         "Integrated CRM with multiple external systems using n8n",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 8,
@@ -332,7 +332,7 @@ const Projects = () => {
         "Enhanced patient care through AI-powered analytics and insights",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 10,
@@ -370,7 +370,7 @@ const Projects = () => {
         "Created AI chatbot using Claude API with 70% query deflection rate",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 11,
@@ -406,7 +406,7 @@ const Projects = () => {
         "Enhanced maritime safety through intelligent monitoring systems",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
 
     // ===== CORE DEVELOPMENT PROJECTS (From CV) =====
@@ -446,7 +446,7 @@ const Projects = () => {
         "Achieved 99.9% uptime with optimized database queries and connection handling",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 13,
@@ -484,7 +484,7 @@ const Projects = () => {
         "Collaborated with DevOps teams to establish CI/CD pipelines using Jenkins and AWS services",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 14,
@@ -522,7 +522,7 @@ const Projects = () => {
         "Established collaborative development practices with Git and GitHub",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
     {
       id: 15,
@@ -561,7 +561,7 @@ const Projects = () => {
         "Improved application performance through optimized MySQL queries and Redis caching",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
 
     // ===== N8N AUTOMATION PROJECTS =====
@@ -600,7 +600,7 @@ const Projects = () => {
         "Trained 300+ product managers through automation workshops",
       ],
       demoUrl: "#",
-      githubUrl: "https://github.com/parthshah/PM-n8n-Toolkit",
+      // githubUrl: "https://github.com/parthshah/PM-n8n-Toolkit",
     },
     {
       id: 17,
@@ -637,7 +637,7 @@ const Projects = () => {
         "Established expertise in n8n automation training and community education",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
 
     // ===== AI INTEGRATION PROJECTS =====
@@ -677,7 +677,7 @@ const Projects = () => {
         "Reduced AI API costs by 45% through intelligent caching and model selection workflows",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
 
     // ===== PRODUCT MANAGEMENT PROJECTS =====
@@ -717,7 +717,7 @@ const Projects = () => {
         "Established PM automation best practices and measurement frameworks",
       ],
       demoUrl: "#",
-      githubUrl: "#",
+      //githubUrl: "#",
     },
   ];
 
@@ -760,7 +760,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="mb-6">
             Featured <span className="text-gradient">Projects</span>
           </h2>
@@ -771,7 +771,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up">
+        <div className="flex flex-wrap justify-center gap-3 mb-8 animate-slide-up">
           {filters.map((filter) => (
             <Button
               key={filter.id}
@@ -852,7 +852,7 @@ const Projects = () => {
                   {/* Tech Stack */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
-                      {project.techStack.slice(0, 4).map((tech) => (
+                      {project.techStack.map((tech) => (
                         <Badge
                           key={tech}
                           variant="secondary"
@@ -861,17 +861,17 @@ const Projects = () => {
                           {tech}
                         </Badge>
                       ))}
-                      {project.techStack.length > 4 && (
+                      {/* {project.techStack.length > 4 && (
                         <Badge variant="outline" className="text-xs">
                           +{project.techStack.length - 4} more
                         </Badge>
-                      )}
+                      )} */}
                     </div>
                   </div>
 
                   {/* Action Buttons */}
                   <div className="flex gap-2">
-                    <Button size="sm" className="flex-1" asChild>
+                    {/* <Button size="sm" className="flex-1" asChild>
                       <a
                         href={project.demoUrl}
                         target="_blank"
@@ -880,8 +880,8 @@ const Projects = () => {
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Demo
                       </a>
-                    </Button>
-                    <Button size="sm" variant="outline" asChild>
+                    </Button> */}
+                    {/* <Button size="sm" variant="outline" asChild>
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -889,7 +889,7 @@ const Projects = () => {
                       >
                         <Github className="w-4 h-4" />
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -898,7 +898,7 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-in">
+        <div className="text-center mt-12 animate-fade-in">
           <h3 className="text-2xl font-semibold mb-4">
             Interested in collaborating?
           </h3>

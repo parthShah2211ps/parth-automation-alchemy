@@ -86,9 +86,10 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -100,7 +101,7 @@ const Navigation = () => {
             isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 space-y-2 border-t border-border mt-4">
+          <div className="py-4 space-y-2 border-t border-border mt-4 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg">
             {navItems.map((item) => (
               <button
                 key={item.label}

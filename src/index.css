@@ -173,19 +173,65 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-muted;
+    @apply bg-muted/50;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/30 rounded-full;
+    @apply bg-muted-foreground/40 rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/50;
+    @apply bg-muted-foreground/60;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
+  }
+
+  /* Smooth transitions for better UX */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* Improved text rendering */
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Performance optimizations */
+  .card-elegant,
+  .btn-hero,
+  .btn-hero-outline {
+    will-change: transform;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .card-elegant {
+      @apply border-2 border-foreground/20;
+    }
+    
+    .btn-hero {
+      @apply border-2 border-primary-foreground;
+    }
   }
 }
 
@@ -210,12 +256,22 @@
   .card-elegant {
     @apply bg-gradient-to-br from-card to-card/80 border border-border/50
            rounded-xl shadow-lg hover:shadow-xl transition-all duration-300
-           backdrop-blur-sm hover:scale-[1.02];
+           backdrop-blur-sm hover:scale-[1.02] hover:border-primary/20;
+  }
+
+  /* Project Cards */
+  .project-card {
+    @apply card-elegant p-4 sm:p-6;
+  }
+
+  /* Skills Cards */
+  .skill-card {
+    @apply card-elegant p-4 sm:p-6;
   }
   
   .card-metric {
     @apply bg-gradient-to-br from-success/10 to-success/5 border border-success/20
-           rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300;
+           rounded-lg text-center hover:shadow-lg transition-all duration-300;
   }
 
   /* Navigation & Interaction */
@@ -308,10 +364,36 @@
 
   /* Spacing utilities */
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-8 md:py-12;
   }
   
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile-first responsive improvements */
+  @media (max-width: 640px) {
+    .container-custom {
+      @apply px-3;
+    }
+    
+    .section-padding {
+      @apply py-8;
+    }
+    
+    h1 {
+      @apply text-3xl;
+    }
+    
+    h2 {
+      @apply text-2xl;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .container-custom {
+      @apply px-6;
+    }
   }
 }

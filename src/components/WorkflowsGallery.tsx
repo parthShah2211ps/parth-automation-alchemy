@@ -140,7 +140,7 @@ const WorkflowsGallery = () => {
     <section id="workflows" className="section-padding">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="mb-6">
             n8n <span className="text-gradient">Workflows Gallery</span>
           </h2>
@@ -151,7 +151,7 @@ const WorkflowsGallery = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up">
+        <div className="flex flex-wrap justify-center gap-3 mb-8 animate-slide-up">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
@@ -173,7 +173,7 @@ const WorkflowsGallery = () => {
         </div>
 
         {/* Workflows Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-scale-in">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-scale-in">
           {filteredWorkflows.map((workflow, index) => (
             <Card
               key={workflow.id}
@@ -260,8 +260,8 @@ const WorkflowsGallery = () => {
         </div>
 
         {/* Gallery Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 animate-fade-in">
-          <div className="text-center card-elegant p-6">
+        <div className="mt-8 grid md:grid-cols-3 gap-4 sm:gap-6 animate-fade-in">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-primary mb-2">50+</div>
             <div className="text-sm text-muted-foreground">Total Workflows</div>
           </div>
@@ -269,20 +269,20 @@ const WorkflowsGallery = () => {
             <div className="text-3xl font-bold text-secondary mb-2">15+</div>
             <div className="text-sm text-muted-foreground">Total Downloads</div>
           </div> */}
-          <div className="text-center card-elegant p-6">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-success mb-2">500+</div>
             <div className="text-sm text-muted-foreground">
               Hours Saved Weekly
             </div>
           </div>
-          <div className="text-center card-elegant p-6">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-purple-500 mb-2">95%</div>
             <div className="text-sm text-muted-foreground">Success Rate</div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-in">
+        <div className="text-center mt-12 animate-fade-in">
           <h3 className="text-2xl font-semibold mb-4">
             Need Custom Automation?
           </h3>

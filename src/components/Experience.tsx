@@ -419,7 +419,7 @@ const Experience = () => {
     <section id="experience" className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="mb-6">
             Professional <span className="text-gradient">Experience</span>
           </h2>
@@ -430,7 +430,7 @@ const Experience = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12 animate-slide-up">
+        <div className="flex justify-center mb-8 animate-slide-up">
           <div className="flex p-1 bg-muted rounded-lg">
             {tabs.map((tab) => {
               const Icon = tab.icon;
@@ -556,7 +556,7 @@ const Experience = () => {
         </div>
 
         {/* Career Summary */}
-        <div className="mt-16 text-center animate-fade-in">
+        <div className="mt-12 text-center animate-fade-in">
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="card-elegant p-6">
               <div className="text-3xl font-bold text-primary mb-2">3+</div>

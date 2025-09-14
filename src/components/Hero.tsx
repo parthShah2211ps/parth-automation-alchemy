@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-16">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -48,11 +48,11 @@ const Hero = () => {
           </h1>
 
           {/* Dynamic Tagline */}
-          <div className="mb-8">
-            <p className="text-xl md:text-2xl text-muted-foreground mb-2">
+          <div className="mb-6">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-2">
               Full-Stack Developer | n8n Automation Expert | Product Manager
             </p>
-            <p className="text-lg md:text-xl text-muted-dark max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-dark max-w-3xl mx-auto leading-relaxed">
               Technical Product Manager with{" "}
               <span className="font-semibold text-primary">3+ years</span> of
               development experience and{" "}
@@ -63,35 +63,35 @@ const Hero = () => {
           </div>
 
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
-            <div className="card-metric">
-              <div className="text-2xl md:text-3xl font-bold text-secondary">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-6 max-w-4xl mx-auto">
+            <div className="card-metric p-4 sm:p-6">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-secondary">
                 50+
               </div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-xs sm:text-sm text-muted-foreground">
                 Automations Built
               </div>
             </div>
-            <div className="card-metric">
-              <div className="text-2xl md:text-3xl font-bold text-success">
+            <div className="card-metric p-4 sm:p-6">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-success">
                 100+
               </div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-xs sm:text-sm text-muted-foreground">
                 Hours Saved Weekly
               </div>
             </div>
-            <div className="card-metric">
-              <div className="text-2xl md:text-3xl font-bold text-primary">
+            <div className="card-metric p-4 sm:p-6">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">
                 5+
               </div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-xs sm:text-sm text-muted-foreground">
                 Workshop Attendees
               </div>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6">
             <Button
               className="btn-hero"
               onClick={() => scrollToSection("projects")}
@@ -115,7 +115,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12">
+          <div className="flex justify-center space-x-4 sm:space-x-6 mb-6">
             <a
               href="https://linkedin.com/in/parth-shah"
               target="_blank"

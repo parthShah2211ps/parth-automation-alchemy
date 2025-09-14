@@ -21,7 +21,7 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-muted/30">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Image */}
           <div className="animate-fade-in">
             <div className="relative">
@@ -44,7 +44,7 @@ const About = () => {
             </h2>
 
             {/* Dynamic rotating text */}
-            <div className="mb-8 font-sans">
+            <div className="mb-6 font-sans">
               {/* This is the main container that acts as a "window".
         - h-16 sets the height.
         - overflow-hidden clips any text that is outside this container's bounds.
@@ -76,7 +76,7 @@ const About = () => {
             </div>
 
             {/* Description */}
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
                 I'm a{" "}
                 <span className="text-primary font-semibold">

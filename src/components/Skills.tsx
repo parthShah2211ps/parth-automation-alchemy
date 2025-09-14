@@ -164,7 +164,7 @@ const Skills = () => {
     <section id="skills" className="section-padding">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="mb-6">
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
@@ -175,7 +175,7 @@ const Skills = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up">
+        <div className="flex flex-wrap justify-center gap-3 mb-8 animate-slide-up">
           {skillCategories.map((category) => {
             const Icon = category.icon;
             return (
@@ -197,13 +197,13 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-scale-in">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-scale-in">
           {filteredSkills.map((skill, index) => {
             const Icon = getSkillIcon(skill.category);
             return (
               <div
                 key={skill.name}
-                className="card-elegant p-6 hover:shadow-brand transition-all duration-300"
+                className="card-elegant p-4 sm:p-6 hover:shadow-brand transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -238,26 +238,26 @@ const Skills = () => {
         </div>
 
         {/* Skills Summary */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6 animate-fade-in">
-          <div className="text-center card-elegant p-6">
+        <div className="mt-8 grid md:grid-cols-4 gap-4 sm:gap-6 animate-fade-in">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-primary mb-2">3+</div>
             <div className="text-sm text-muted-foreground">
               Years Experience
             </div>
           </div>
-          <div className="text-center card-elegant p-6">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-secondary mb-2">5+</div>
             <div className="text-sm text-muted-foreground">
               Technologies Mastered
             </div>
           </div>
-          <div className="text-center card-elegant p-6">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-success mb-2">50+</div>
             <div className="text-sm text-muted-foreground">
               Automation Workflows
             </div>
           </div>
-          <div className="text-center card-elegant p-6">
+          <div className="text-center card-elegant p-4 sm:p-6">
             <div className="text-3xl font-bold text-purple-500 mb-2">100+</div>
             <div className="text-sm text-muted-foreground">People Trained</div>
           </div>
